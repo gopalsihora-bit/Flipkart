@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart | Online Shopping</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span>Flipkart</span>
+      <small>Explore <b>Plus ✦</b></small>
+    </a>
+
+    <form class="search-box" id="searchForm">
+      <button type="submit" aria-label="Search">⌕</button>
+      <input id="searchInput" type="search"
+        placeholder="Search for products, brands and more">
+    </form>
+
+    <button class="nav-button login-button" id="loginButton">Login</button>
+    <a class="nav-link" href="#products">Become a Seller</a>
+    <button class="nav-button cart-button" id="cartButton">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="categories" id="categories">
+      <button class="category active" data-category="All">
+        <span>🛍️</span> All
+      </button>
+      <button class="category" data-category="Electronics">
+        <span>📱</span> Electronics
+      </button>
+      <button class="category" data-category="Fashion">
+        <span>👕</span> Fashion
+      </button>
+      <button class="category" data-category="Home">
+        <span>🛋️</span> Home
+      </button>
+      <button class="category" data-category="Appliances">
+        <span>🧊</span> Appliances
+      </button>
+      <button class="category" data-category="Beauty">
+        <span>💄</span> Beauty
+      </button>
+      <button class="category" data-category="Sports">
+        <span>⚽</span> Sports
+      </button>
+    </section>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">THE BIG SHOPPING DAYS</p>
+        <h1>Big savings.<br>Big smiles.</h1>
+        <p>Discover amazing deals on your everyday favourites.</p>
+        <button id="shopNowButton" class="primary-button">
+          Shop Now →
+        </button>
+      </div>
+      <div class="hero-art" aria-label="Shopping promotion">
+        <div class="hero-circle">
+          <span class="hero-emoji">🛍️</span>
+          <span class="discount-tag">UP TO<br><strong>50% OFF</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="deal-strip">
+      <span>⚡ Top Deals</span>
+      <span>🚚 Easy Shopping</span>
+      <span>🔒 Secure Checkout Demo</span>
+      <span>💙 Great Finds Every Day</span>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <h2 id="sectionTitle">Best Deals For You</h2>
+          <p>Handpicked products at great prices</p>
+        </div>
+        <button id="clearSearch" class="text-button hidden">
+          Clear filters ✕
+        </button>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+      <p id="emptyMessage" class="empty-message hidden">
+        No products found. Try another search.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Flipkart Demo</h3>
+        <p>A sample e-commerce website built using HTML, CSS and JavaScript.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+      </div>
+      <div>
+        <h4>Customer Service</h4>
+        <p>Help Centre</p>
+        <p>Returns</p>
+        <p>Shopping Information</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Flipkart Demo · Educational project, not affiliated with Flipkart.
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer"
+    role="dialog" aria-modal="true" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>My Cart (<span id="drawerCount">0</span>)</h2>
+      <button id="closeCart" class="close-button" aria-label="Close cart">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total Amount</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <button id="checkoutButton" class="checkout-button">
+        Continue to Checkout
+      </button>
+      <p class="demo-note">Demo only — no real payment will be taken.</p>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
